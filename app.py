@@ -49,17 +49,17 @@ def predict():
         # Identify risk factors
         risk_factors = []
         if bmi > thresholds["BMI"]:
-            risk_factors.append("BMI is above the healthy range.")
+            risk_factors.append("BMI is above the healthy range. Consider a balanced diet and regular exercise.")
         if blood_sugar > thresholds["Blood Sugar"]:
-            risk_factors.append("Blood sugar is high.")
+            risk_factors.append("Blood sugar is high. Reduce sugar intake and monitor glucose levels.")
         if cholesterol > thresholds["Cholesterol"]:
-            risk_factors.append("Cholesterol level is high.")
+            risk_factors.append("Cholesterol level is high. Eat fiber-rich foods and reduce saturated fats.")
         if crp > thresholds["CRP"]:
-            risk_factors.append("CRP is elevated, indicating inflammation.")
+            risk_factors.append("CRP is elevated, indicating inflammation. Consider an anti-inflammatory diet.")
         if renal_function < thresholds["Renal Function"]:
-            risk_factors.append("Renal function is low.")
+            risk_factors.append("Renal function is low. Stay hydrated and monitor kidney health.")
         if systolic > thresholds["Systolic"] or diastolic > thresholds["Diastolic"]:
-            risk_factors.append("Blood pressure is high.")
+            risk_factors.append("Blood pressure is high. Reduce salt intake and practice stress management.")
 
         # Return JSON response
         return jsonify({
