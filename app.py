@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from flask_cors import CORS
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,6 +7,7 @@ import io
 import base64
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the model
 with open('ensemble_model2.pkl', 'rb') as file:
